@@ -38,8 +38,6 @@ y[n] = input_yn
 #sympy symbols for list having arbitrary size.
 eqn = [symbols('eqn%d' % i) for i in range(n)]
 y_ans = [symbols('y%d' % i) for i in range(n)]
-combined_eqn = [symbols('all_eqn%d' % i) for i in range(n)]
-combined_y = [symbols('all_y%d' % i) for i in range(n)]
 
 
 print("\nThe obtained equations are\n")
@@ -53,14 +51,15 @@ for i in range(1,n):
     else:
         eqn[i] = Eq(y_ans[i-1] * ((1/(h*h)) - (1/(2*h))*px(x[i])) + y_ans[i] * ((-2/(h*h)) + qx(x[i])) + y_ans[i+1] * (1/(h*h) + (1/(2*h))*px(x[i])), rx(x[i]))
         print(eqn[i])
-    combined_eqn[i] = eqn[i]
-    combined_y[i] = y_ans[i] 
+ 
 
-#Solving liner=ar equation using sympy built in solve function.
+#Solving linear equation using sympy built in solve function.
 print(f"\nSolving the {n-1} linear equations,\n")
-soln_dict = solve(combined_eqn, combined_y)
+soln_dict = solve(eqn, y_ans)
 for i in range(1,n):
-    print(f"y({x[i]}) = {soln_dict[combined_y[i]]}")
+    print(f"y({x[i]}) = {soln_dict[y_ans[i]]}")
+
+
 
 
 
