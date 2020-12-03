@@ -1,3 +1,22 @@
+'''
+Name: Salina Koirala
+Roll no: 27
+CE II/II
+
+
+Group Members,
+Salina Koirala(27)
+Gaurav Rizal(57)
+'''
+'''
+Pre requisties:
+1) Install sympy
+    pip3 install sympy
+2) Run the program.
+    python3 {filename}.py
+'''
+
+
 import math
 from sympy import *
 
@@ -22,7 +41,7 @@ rx = lambdify([x], rx1, modules=['math'])
 print("\nThe boundary values are (x0,y0) and (xn,yn).\nThey might be in the form of y(x0)= y0 and y(xn) = yn.\n")
 
 input_x0 = int(input("Enter x0 : "))
-input_y0 = int(input("Enter y0  : "))
+input_y0 = int(input("Enter y0 : "))
 input_xn = int(input("Enter xn : "))
 input_yn = int(input("Enter yn : "))
 n = int(input("Enter no. of intervals(n) : "))
