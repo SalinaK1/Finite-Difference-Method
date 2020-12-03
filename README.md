@@ -3,8 +3,8 @@ This is a basic python program to demonstrate finite difference method (numerica
 
 Pre requisties:
 1) Install sympy
-    pip3 install sympy
+pip3 install sympy
     
 Run the program.
-    python3 finite difference.py
+python3 finite difference.py
     
